@@ -1,18 +1,6 @@
 'use strict';
 
 /*
- * Represents an editor for a file
- * in a project.
- */
-function Editor(filename) {
-    this.filename = filename;
-    this.element = document.createElement('textarea');
-    this.element.placeholder = 'textareas suck';
-    this.element.className = 'editor';
-    this.element.id = 'editor-for-' + filename;
-}
-
-/*
  * Represents a single file in a
  * project.
  */
