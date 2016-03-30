@@ -56,6 +56,13 @@ function detectFileType(filename) {
     case 'php':
         return 'PHP source';
     case 'sh':
+    case 'xinitrc':
+    case 'profile':
+    case 'bash_profile':
+    case 'bashrc':
+    case 'zshrc':
+    case 'kshrc':
+    case 'mkshrc':
         return 'Shell script';
     case 'bat':
     case 'cmd':
@@ -87,10 +94,14 @@ function detectFileType(filename) {
     case 'lisp':
         return 'Lisp';
     case 'scm':
+    case 'guile':
+    case 'festivalrc':
         return 'Scheme';
     case 'rkt':
+    case 'racketrc':
         return 'Racket';
     case 'el':
+    case 'emacs':
         return 'Emacs Lisp';
     case 'hs':
         return 'Haskell';
@@ -114,7 +125,10 @@ function detectFileType(filename) {
     case 'st':
         return 'Smalltalk';
     case 'vim':
+    case 'vimrc':
         return 'VimL';
+    case 'exrc':
+        return 'vi script';
     default:
         return 'unknown';
     }
