@@ -1,2 +1,29 @@
+<script>
+'use strict';
+
+function Editor(filename) {
+    this.filename = filename;
+    this.element = document.createElement('textarea');
+    this.element.textContent = 'textareas suck';
+    this.element.className = 'editor';
+    this.element.id = 'editor-for-' + filename;
+}
+
+function addfile() {
+    var name = prompt('File name?');
+    var files = document.querySelector('ul#files');
+    var file = document.createElement('li');
+    var title = document.createElement('h3');
+    var editor = new Editor(name);
+    title.textContent = name;
+    file.appendChild(title);
+    file.appendChild(editor.element);
+    files.appendChild(file);
+}
+</script>
 <input type="text" id="project-name" placeholder="Project Name">
-<button id="add-file" onclick="addfile()">Add file to project</button>
+<ul id="files">
+</ul>
+<button id="add-file" onclick="addfile()">
+    <strong>Add file to project</strong>
+</button>
