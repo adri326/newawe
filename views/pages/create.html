@@ -1,19 +1,33 @@
 <script>
 'use strict';
 
+/*
+ * Represents an editor for a file
+ * in a project.
+ */
 function Editor(filename) {
     this.filename = filename;
     this.element = document.createElement('textarea');
-    this.element.textContent = 'textareas suck';
+    this.element.placeholder = 'textareas suck';
     this.element.className = 'editor';
     this.element.id = 'editor-for-' + filename;
 }
 
-function addfile() {
+/*
+ * Represents a project.
+ */
+function Project(name) {
+    var title = document.querySelector('h3#project-name');
+    title.textContent = name;
+    this.name = name;
+    this.files = [];
+}
+
+Project.prototype.addfile = function() {
     var name = prompt('File name?');
     var files = document.querySelector('ul#files');
     var file = document.createElement('li');
-    var title = document.createElement('h3');
+    var title = document.createElement('h4');
     var editor = new Editor(name);
     title.textContent = name;
     file.appendChild(title);
@@ -21,9 +35,12 @@ function addfile() {
     files.appendChild(file);
 }
 </script>
-<input type="text" id="project-name" placeholder="Project Name">
+<h3 id="project-name"></h3>
 <ul id="files">
 </ul>
-<button id="add-file" onclick="addfile()">
+<button id="add-file" onclick="thisProject.addfile()">
     <strong>Add file to project</strong>
 </button>
+<script>
+var thisProject = new Project(prompt("Name?"));
+</script>
