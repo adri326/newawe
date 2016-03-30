@@ -51,7 +51,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #0088a3;
 }
-button[type=submit] {
+button {
     width: 100%;
     background-color: #00A3C6;
     color: white;
@@ -62,16 +62,12 @@ button[type=submit] {
     cursor: pointer;
 }
 
-button[type=submit]:hover {
+button:hover {
     background-color: #0088a3;
 }
 
 main.container {
     height: 100%;
-    width: 100%;
-}
-
-button#add-file {
     width: 100%;
 }
 

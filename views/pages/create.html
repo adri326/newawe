@@ -4,9 +4,10 @@
 <ul class="project-files" id="files">
 </ul>
 <button id="add-file" onclick="thisProject.addfile()">
-    <strong>Add file to project</strong>
+    Add file to project
 </button>
 <script type="text/javascript">
     // Create the project.
-    var thisProject = new Project(prompt("Project name?"));
+    var name = prompt("Project name?");
+    var thisProject = new Project(name);
 </script>
