@@ -75,7 +75,7 @@ button#add-file {
     width: 100%;
 }
 
-ul#files {
+ul.project-files {
     list-style-type: none;
 }
 
