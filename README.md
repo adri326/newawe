@@ -1,12 +1,57 @@
-# Newawe
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/f3201d5877ae4cf2b6e4cecd68f46c52)](https://www.codacy.com/app/robin_3/newawe)
+# newawe
 
-The style for all PHP must follow the PSR-2 style: http://www.php-fig.org/psr/psr-2/
-Failing to do so will cause your Pull Request to be denied until fixed
+> Experimental code sharing
 
-When adding a new feature or fixing a bug, create a new branch/fork and implement your feature there. Once you are finished with your modification/additions, submit a PR for review and merging into the official codebase.
+## About
 
-Never accept your own PR. Require at least one person to review your code. This is to avoid possible security faults and bad coding styles.
+This project uses [Feathers](http://feathersjs.com). An open source web  framework for building modern real-time applications.
 
+## Getting Started
 
-Warning! Any code that you add to the newawe source is owned by newawe!
+Getting up and running is as easy as 1, 2, 3.
+
+1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
+2. Install your dependencies
+    
+    ```
+    cd path/to/newawe; npm install
+    ```
+
+3. Start your app
+    
+    ```
+    npm start
+    ```
+
+## Testing
+
+Simply run `npm test` and all your tests in the `test/` directory will be run.
+
+## Scaffolding
+
+Feathers has a powerful command line interface. Here are a few things it can do:
+
+```
+$ npm install -g feathers-cli             # Install Feathers CLI
+
+$ feathers generate service               # Generate a new Service
+$ feathers generate hook                  # Generate a new Hook
+$ feathers generate model                 # Generate a new Model
+$ feathers help                           # Show all commands
+```
+
+## Help
+
+For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
+
+## Changelog
+
+__0.1.0__
+
+- Initial release
+
+## License
+
+Copyright (c) 2015
+
+Licensed under the [MIT license](LICENSE).
